@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Horsesoft.Procgame.Manager.Base", "src\Horsesoft.Procgame.Manager.Base\Horsesoft.Procgame.Manager.Base.csproj", "{513D9B41-BCE7-42D6-921F-F263A50F1D5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Horsesoft.Procgame.Manager.Shell", "src\Horsesoft.Procgame.Manager.Shell\Horsesoft.Procgame.Manager.Shell.csproj", "{99C9E82C-C594-446D-AA59-8FFBC43AD226}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{FB991314-D025-4969-ACDD-CFE8F5BB9634}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Horsesoft.Procgame.AssetServices", "src\Modules\Horsesoft.Procgame.AssetServices\Horsesoft.Procgame.AssetServices.csproj", "{AB8B448C-DD74-4D60-A041-3E5D03A32180}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{ACA843B6-2F93-466F-9E26-A639F3806F61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Horsesoft.Procgame.AssetModel", "src\Models\Horsesoft.Procgame.AssetModel\Horsesoft.Procgame.AssetModel.csproj", "{DB700065-FDB5-4A4F-B90D-8A985C0C8CF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Horsesoft.MenuTileNavigation", "src\Modules\Horsesoft.MenuTileNavigation\Horsesoft.MenuTileNavigation.csproj", "{C3F8E480-B726-47A9-AA69-B8E9D8F92B80}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{B8FE30C9-5D5B-4299-AC42-E0F1B5323B31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit.RegexTest", "src\Test\NUnit.RegexTest\NUnit.RegexTest.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Horsesoft.Procgame.Config", "src\Models\Horsesoft.Procgame.Config\Horsesoft.Procgame.Config.csproj", "{0E874D04-B297-4CE7-B334-98D7BBC9F0C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Horsesoft.Procgame.AssetServicesFFmpeg", "src\Modules\Horsesoft.Procgame.AssetServicesFFmpeg\Horsesoft.Procgame.AssetServicesFFmpeg.csproj", "{AFFDF084-1409-422D-B219-C6BC0B410B5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Horsesoft.Procgame.AssetServicesMediaToolKit", "src\Modules\Horsesoft.Procgame.AssetServicesMediaToolKit\Horsesoft.Procgame.AssetServicesMediaToolKit.csproj", "{5D47D03C-419C-4D07-A2EB-7C1392E1E30E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{513D9B41-BCE7-42D6-921F-F263A50F1D5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{513D9B41-BCE7-42D6-921F-F263A50F1D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{513D9B41-BCE7-42D6-921F-F263A50F1D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{513D9B41-BCE7-42D6-921F-F263A50F1D5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99C9E82C-C594-446D-AA59-8FFBC43AD226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C9E82C-C594-446D-AA59-8FFBC43AD226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C9E82C-C594-446D-AA59-8FFBC43AD226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C9E82C-C594-446D-AA59-8FFBC43AD226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB8B448C-DD74-4D60-A041-3E5D03A32180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB8B448C-DD74-4D60-A041-3E5D03A32180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB8B448C-DD74-4D60-A041-3E5D03A32180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB8B448C-DD74-4D60-A041-3E5D03A32180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB700065-FDB5-4A4F-B90D-8A985C0C8CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB700065-FDB5-4A4F-B90D-8A985C0C8CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB700065-FDB5-4A4F-B90D-8A985C0C8CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB700065-FDB5-4A4F-B90D-8A985C0C8CF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3F8E480-B726-47A9-AA69-B8E9D8F92B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3F8E480-B726-47A9-AA69-B8E9D8F92B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3F8E480-B726-47A9-AA69-B8E9D8F92B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3F8E480-B726-47A9-AA69-B8E9D8F92B80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E874D04-B297-4CE7-B334-98D7BBC9F0C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E874D04-B297-4CE7-B334-98D7BBC9F0C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E874D04-B297-4CE7-B334-98D7BBC9F0C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E874D04-B297-4CE7-B334-98D7BBC9F0C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFFDF084-1409-422D-B219-C6BC0B410B5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFFDF084-1409-422D-B219-C6BC0B410B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFFDF084-1409-422D-B219-C6BC0B410B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFFDF084-1409-422D-B219-C6BC0B410B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D47D03C-419C-4D07-A2EB-7C1392E1E30E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D47D03C-419C-4D07-A2EB-7C1392E1E30E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D47D03C-419C-4D07-A2EB-7C1392E1E30E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D47D03C-419C-4D07-A2EB-7C1392E1E30E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AB8B448C-DD74-4D60-A041-3E5D03A32180} = {FB991314-D025-4969-ACDD-CFE8F5BB9634}
+		{DB700065-FDB5-4A4F-B90D-8A985C0C8CF6} = {ACA843B6-2F93-466F-9E26-A639F3806F61}
+		{C3F8E480-B726-47A9-AA69-B8E9D8F92B80} = {FB991314-D025-4969-ACDD-CFE8F5BB9634}
+		{8EDF4429-251A-416D-BB68-93F227191BCF} = {B8FE30C9-5D5B-4299-AC42-E0F1B5323B31}
+		{0E874D04-B297-4CE7-B334-98D7BBC9F0C2} = {ACA843B6-2F93-466F-9E26-A639F3806F61}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Horsesoft.MenuTileNavigation.Views.MenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <StackPanel Margin="5">
+            <metro:Tile Width="350" Height="100" Command="{Binding NavigateCommand}" CommandParameter="AnimationView" Content="Animations" FontSize="36" VerticalAlignment="Top"/>
+            <metro:Tile Width="350" Content="Fonts" Command="{Binding NavigateCommand}" CommandParameter="FontView" Height="100" FontSize="36" VerticalAlignment="Top"/>
+            <metro:Tile Width="350" Height="100" Command="{Binding NavigateCommand}" CommandParameter="SoundView" Content="Sound" FontSize="36" VerticalAlignment="Top"/>
+            <metro:Tile Width="350" Height="100" Command="{Binding NavigateCommand}" CommandParameter="LampsView"  Content="Lamps" FontSize="36" VerticalAlignment="Top"/>
+            <metro:Tile Width="350" Height="100" Command="{Binding NavigateCommand}" CommandParameter="MachineView"  Content="Machine" FontSize="36" VerticalAlignment="Top"/>
+            <metro:Tile Width="350" Height="100" Content="Config" Command="{Binding NavigateCommand}" CommandParameter="ConfigView"  FontSize="36" VerticalAlignment="Top"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

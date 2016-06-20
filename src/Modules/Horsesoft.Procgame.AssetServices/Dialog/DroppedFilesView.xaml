@@ -1,0 +1,132 @@
+﻿<UserControl x:Class="Horsesoft.Procgame.AssetServices.Dialog.DroppedFilesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+             mc:Ignorable="d"                   
+             d:DesignHeight="768" d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <Thickness x:Key="ControlMargin">0 1</Thickness>
+
+        <Style x:Key="CustomMetroToggleSwitchButton"
+                       TargetType="{x:Type metro:ToggleSwitchButton}"
+                       BasedOn="{StaticResource MetroToggleSwitchButton}">
+            <Setter Property="SwitchForeground"
+                            Value="YellowGreen" />
+        </Style>
+    </UserControl.Resources>
+
+    <Grid x:Name="root" Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+
+            <RowDefinition Height="65"/>
+        </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <BooleanToVisibilityConverter x:Key="BoolToVisConverter"/>
+        </Grid.Resources>
+
+        <Grid Grid.Row="1" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="28" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MaxWidth="80"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Label Content="Anim name" 
+               Grid.Row="1"/>
+            <TextBox Text="{Binding ConvertSettings.AnimationName}" 
+                 Grid.Row="1" Grid.Column="1"/>
+
+            <DockPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0">
+                <CheckBox Content="Convert" 
+                          IsChecked="{Binding ConvertSettings.ConvertToImages}"/>
+            </DockPanel>
+
+            <Label Content="Framerate" Grid.Row="2" HorizontalAlignment="Center"/>
+                <metro:NumericUpDown Minimum="1" MaxWidth="80" Width="80" Grid.Column="1" Grid.Row="2"
+                                     Value="{Binding ConvertSettings.Fps}" HorizontalAlignment="Left" Margin="5,0"/>
+
+            <Label Content="Format" Margin="0,2" Grid.Row="3"/>
+            <TextBox metro:TextBoxHelper.Watermark="png" Grid.Row="3" Grid.Column="1" Text="{Binding ConvertSettings.ImageFormat}"/>
+
+            <CheckBox Content="Convert" Grid.Row="4"
+                          IsChecked="{Binding ConvertSettings.ConvertAudio}"/>
+
+            <Label Content="Audio name" 
+               Grid.Row="5"/>
+            <TextBox  Text="{Binding ConvertSettings.AudioName}"
+                 Grid.Row="5" Grid.Column="1"/>
+
+            <Label Content="Audio format" 
+               Grid.Row="6"/>
+            <TextBox metro:TextBoxHelper.Watermark="ogg" 
+                     Grid.Row="6" Grid.Column="1" Text="{Binding ConvertSettings.AudioFormat,UpdateSourceTrigger=PropertyChanged}"/>
+
+            <!--
+            
+
+            <Label Content="Audio name" 
+               Grid.Row="3"/>
+            <TextBox Margin="2" Text="Audio" 
+                 Grid.Row="4" Grid.Column="1"/>
+
+            <Label Content="Audio name" 
+               Grid.Row="5"/>
+            <TextBox Margin="2" Text="Audio" 
+                 Grid.Row="5" Grid.Column="1"/>-->
+        </Grid>
+
+        <DockPanel Grid.Row="2">
+            <Button Width="28" Height="28" 
+                        VerticalAlignment="top" Margin="15" 
+                        Command="{Binding SaveCommand}"
+                        CommandParameter=""
+                    ToolTip="Save file"
+                    Background="Green"
+                        Style="{DynamicResource AccentedSquareButtonStyle}">
+                <Rectangle Width="15"
+                               Height="15"
+                               Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
+                    <Rectangle.OpacityMask>
+                        <VisualBrush Stretch="Fill"
+                                         Visual="{DynamicResource appbar_disk}" />
+                    </Rectangle.OpacityMask>
+                </Rectangle>
+            </Button>
+
+            <Button Width="28" Height="28" VerticalAlignment="Top"  HorizontalAlignment="Left" 
+                    Margin="15" Grid.Row="2" 
+                    Command="{Binding CloseAllPendingFileDropCommand}"                        
+                    Background="{DynamicResource ValidationBrush5}"
+                    ToolTip="Quit &amp; skip all"
+                        Style="{DynamicResource AccentedSquareButtonStyle}">
+                <Rectangle Width="15"
+                               Height="15"
+                               Fill="{Binding Path=Foreground, 
+                    RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
+                    <Rectangle.OpacityMask>
+                        <VisualBrush Stretch="Fill"
+                                         Visual="{DynamicResource appbar_close}" />
+                    </Rectangle.OpacityMask>
+                </Rectangle>
+            </Button>
+        </DockPanel>
+
+    </Grid>
+</UserControl>
+    

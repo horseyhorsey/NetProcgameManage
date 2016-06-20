@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Horsesoft.Procgame.AssetServices.Views.MachineView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"        
+             xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+             Height="768" Width="400"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <TabControl Grid.Row="1">
+            <TabItem Header="Machine">
+                <DockPanel>
+                    <TextBox Text="{Binding Config.PRGame.machineType}"/>
+                    <metro:NumericUpDown/>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="Switches"/>
+            <TabItem Header="Coils"/>
+            <TabItem Header="Lamps"/>
+        </TabControl>
+        
+        <Button Grid.Row="2" Command="{Binding NavigateCommand}" CommandParameter="MenuView"/>
+    </Grid>
+</UserControl>

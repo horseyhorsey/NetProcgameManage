@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="Horsesoft.Procgame.AssetServices.Views.FontView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:extendKit="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:prism="http://prismlibrary.com/"      
+             Height="768" Width="400"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid x:Name="root">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Fonts" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="42"/>
+        <Button Margin="10" Grid.Row="1" Content="Back" Command="{Binding NavigateCommand}" CommandParameter="MenuView"/>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border BorderThickness="4,4,4,0" 
+            Background="{DynamicResource ProgressBrush}"
+            CornerRadius="12">
+            <ListBox Margin="5" ItemsSource="{Binding Fonts}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel LastChildFill="False">
+                        <TextBox Margin="5" Text="{Binding Alias}" MaxWidth="100" MinWidth="100"></TextBox>
+                        <TextBlock Margin="5" Text="{Binding Font}" MaxWidth="100" MinWidth="100"></TextBlock>
+                        <metro:NumericUpDown Margin="5" Value="{Binding Size}" MaxWidth="100"/>
+                    </DockPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+            </Border>
+
+            <Border BorderThickness="4,4,4,0" Grid.Row="1"
+            Background="{DynamicResource ProgressBrush}"
+            CornerRadius="12">
+            <ListBox Margin="10" ItemsSource="{Binding FolderFonts}" Grid.Row="1" SelectionMode="Single">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                            <WrapPanel >
+                                <TextBlock Margin="5" Text="{Binding}" MaxWidth="100" MinWidth="100"/>
+                                <Button Content="Use" Command="{Binding ElementName=root,Path=DataContext.AddFontCommand}"/>
+                        </WrapPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            </Border>
+        </Grid>
+
+        <Label Content="Styles" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="42"/>
+        <Border BorderThickness="4,4,4,0" Grid.Row="4" 
+            Background="{DynamicResource ProgressBrush}"
+            CornerRadius="12">
+        <DataGrid Margin="5" AutoGenerateColumns="False" ItemsSource="{Binding FontStyles}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                <DataGridTemplateColumn Header="Fill">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <extendKit:ColorPicker
+                                               SelectedColor="{Binding InteriorColor,UpdateSourceTrigger=PropertyChanged}"
+                                               DisplayColorAndName="True"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Line">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <extendKit:ColorPicker 
+                                SelectedColor="{Binding LineColor,UpdateSourceTrigger=PropertyChanged}"
+                                               DisplayColorAndName="True"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                
+                <DataGridTemplateColumn Header="Width">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <metro:NumericUpDown Minimum="0" Value="{Binding LineWidth}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        </Border>
+        
+    </Grid>
+</UserControl>

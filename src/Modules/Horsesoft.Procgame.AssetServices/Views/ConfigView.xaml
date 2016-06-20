@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="Horsesoft.Procgame.AssetServices.Views.ConfigView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:prism="http://prismlibrary.com/"     
+             Height="768" Width="400"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Display" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"/>
+        <StackPanel Margin="10" Grid.Row="1">
+            <DockPanel>
+                <DockPanel LastChildFill="False">
+                    <Label Content="DotsW" MinWidth="100" MaxWidth="100"/>
+                    <metro:NumericUpDown MaxWidth="90" Value="{Binding Config.DotsW}" MinWidth="90" Minimum="0"/>
+                </DockPanel>
+                <DockPanel LastChildFill="False">
+                    <Label Content="DotsH" MinWidth="100" MaxWidth="100" />
+                    <metro:NumericUpDown MaxWidth="90" Value="{Binding Config.DotsH}" MinWidth="90" Minimum="0"/>
+                </DockPanel>
+            </DockPanel>
+            <DockPanel>
+                <DockPanel LastChildFill="False">
+                    <Label Content="PosX" MinWidth="100" MaxWidth="100"/>
+                    <metro:NumericUpDown MaxWidth="90" MinWidth="90" Value="{Binding Config.ScreenPositionX}" Minimum="0"/>
+                </DockPanel>
+                <DockPanel LastChildFill="False">
+                    <Label Content="PosY" MinWidth="100" MaxWidth="100" />
+                    <metro:NumericUpDown MaxWidth="90" MinWidth="90" Value="{Binding Config.ScreenPositionY}"  Minimum="0"/>
+                </DockPanel>
+            </DockPanel>
+            <DockPanel>
+                <DockPanel LastChildFill="False">
+                    <Label Content="Scale" MinWidth="100" MaxWidth="100" />
+                    <metro:NumericUpDown MaxWidth="90" MinWidth="90" Value="{Binding Config.DisplayScale}" Minimum="0"/>
+                </DockPanel>
+                <DockPanel LastChildFill="False">
+                    <Label Content="FrameRate" MinWidth="100" MaxWidth="100" />
+                    <metro:NumericUpDown MaxWidth="90" Value="{Binding Config.FrameRate}"  MinWidth="90" Minimum="0" Maximum="120"/>
+                </DockPanel>
+            </DockPanel>
+            <DockPanel>
+                <DockPanel LastChildFill="False">
+                    <Label Content="Flip" MinWidth="100" MaxWidth="100" />
+                    <CheckBox MaxWidth="80" MinWidth="80" IsChecked="{Binding Config.DisplayFlip}" />
+                </DockPanel>
+                <DockPanel LastChildFill="False">
+                    <Label Content="Filter" MinWidth="100" MaxWidth="100" />
+                    <CheckBox MaxWidth="80" MinWidth="80" IsChecked="{Binding Config.DisplayFilter}" />
+                </DockPanel>
+            </DockPanel>
+            <DockPanel>
+                <DockPanel LastChildFill="False">
+                    <Label Content="Borderless" MinWidth="100" MaxWidth="100" />
+                    <CheckBox MaxWidth="80" MinWidth="80" IsChecked="{Binding Config.Borderless}" />
+                </DockPanel>
+                <DockPanel LastChildFill="False">
+                    <Label Content="FullScreen" MinWidth="100" MaxWidth="100" />
+                    <CheckBox MaxWidth="80" MinWidth="80" IsChecked="{Binding Config.FullScreen}" />
+                </DockPanel>
+            </DockPanel>
+        </StackPanel>
+
+        <Label Content="Asset Paths" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"/>
+        <StackPanel Grid.Row="3">
+            <DockPanel Margin="5" LastChildFill="True">
+                <Label Content="ImagesPath" MinWidth="100" MaxWidth="100"/>
+                <TextBox Text="{Binding Config.ImagesPath}" />
+            </DockPanel>
+            <DockPanel Margin="5" LastChildFill="True">
+                <Label Content="FontPath" MinWidth="100" MaxWidth="100"/>
+                <TextBox Text="{Binding Config.FontPath}" />
+            </DockPanel>
+            <DockPanel Margin="5" LastChildFill="True">
+                <Label Content="SoundPath" MinWidth="100" MaxWidth="100"/>
+                <TextBox  Text="{Binding Config.SoundPath}" />
+            </DockPanel>
+            <DockPanel Margin="5" LastChildFill="True">
+                <Label Content="VoicePath" MinWidth="100" MaxWidth="100"/>
+                <TextBox  Text="{Binding Config.VoicePath}" />
+            </DockPanel>
+            <DockPanel Margin="5" LastChildFill="True">
+                <Label Content="SfxPath" MinWidth="100" MaxWidth="100"/>
+                <TextBox  Text="{Binding Config.SfxPath}" />
+            </DockPanel>
+            <DockPanel Margin="5" LastChildFill="True">
+                <Label Content="MusicPath" MinWidth="100" MaxWidth="100"/>
+                <TextBox  Text="{Binding Config.MusicPath}" />
+            </DockPanel>
+        </StackPanel>
+
+        <DockPanel Grid.Row="4" Grid.ColumnSpan="4" >
+            <Button Width="200" Content="Save"  Command="{Binding SaveConfigCommand}"/>
+            <Button Width="200" Content="Back"  Command="{Binding NavigateCommand}" CommandParameter="MenuView"/>
+            <!--SaveGameConfig-->
+        </DockPanel>
+        
+    </Grid>
+</UserControl>

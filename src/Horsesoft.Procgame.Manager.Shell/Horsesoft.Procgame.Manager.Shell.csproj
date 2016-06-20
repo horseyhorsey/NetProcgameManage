@@ -1,0 +1,730 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{99C9E82C-C594-446D-AA59-8FFBC43AD226}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Horsesoft.Procgame.Manager.Shell</RootNamespace>
+    <AssemblyName>SkeletonGameGui</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tree.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MahApps.Metro, Version=1.3.0.61, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MahApps.Metro.1.3.0-ALPHA061\lib\net45\MahApps.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MediaToolkit, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MediaToolkit.1.1.0.1\lib\net40\MediaToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Prism, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Prism.Core.6.1.0\lib\net45\Prism.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Prism.Unity.Wpf, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Prism.Unity.6.2.0-pre2\lib\net45\Prism.Unity.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Prism.Wpf, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Prism.Wpf.6.1.1-pre1\lib\net45\Prism.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MahApps.Metro.1.3.0-ALPHA061\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=2.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Extended.Wpf.Toolkit.2.8\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=2.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Extended.Wpf.Toolkit.2.8\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=2.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Extended.Wpf.Toolkit.2.8\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=2.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Extended.Wpf.Toolkit.2.8\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid, Version=2.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Extended.Wpf.Toolkit.2.8\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=2.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Extended.Wpf.Toolkit.2.8\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Models\MahAppTheme.cs" />
+    <Compile Include="ViewModels\SettingsFlyoutViewModel.cs" />
+    <Compile Include="Views\SettingsFlyout.xaml.cs">
+      <DependentUpon>SettingsFlyout.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\SettingsFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="asset\Animation.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="asset\Audio.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="asset\Font.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="asset\FontStyle.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="asset\fonts\EvilDead.ttf" />
+    <Resource Include="asset\fonts\EVILDEAD_old.TTF" />
+    <Resource Include="asset\fonts\FEASFBI_.TTF" />
+    <Resource Include="asset\fonts\FEASFBRG.TTF" />
+    <Resource Include="asset\fonts\Oswald-Bold.ttf" />
+    <Resource Include="asset\fonts\Oswald-BoldItalic.ttf" />
+    <Resource Include="asset\fonts\Oswald-Demi-BoldItalic.ttf" />
+    <Resource Include="asset\fonts\Oswald-DemiBold.ttf" />
+    <Resource Include="asset\fonts\Oswald-Extra-LightItalic.ttf" />
+    <Resource Include="asset\fonts\Oswald-ExtraLight.ttf" />
+    <Resource Include="asset\fonts\Oswald-Heavy.ttf" />
+    <Resource Include="asset\fonts\Oswald-HeavyItalic.ttf" />
+    <Resource Include="asset\fonts\Oswald-Light.ttf" />
+    <Resource Include="asset\fonts\Oswald-LightItalic.ttf" />
+    <Resource Include="asset\fonts\Oswald-Medium.ttf" />
+    <Resource Include="asset\fonts\Oswald-MediumItalic.ttf" />
+    <Resource Include="asset\fonts\Oswald-Regular.ttf" />
+    <Resource Include="asset\fonts\Oswald-RegularItalic.ttf" />
+    <Resource Include="asset\fonts\Oswald-Stencil.ttf" />
+    <Resource Include="asset\fonts\PKMN-Pinball.ttf" />
+    <None Include="asset\Lamp.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="asset\Video.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="Resources\Entypo.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WindowsIcons-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Entypo-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Horsesoft.Procgame.Manager.Base\Horsesoft.Procgame.Manager.Base.csproj">
+      <Project>{513d9b41-bce7-42d6-921f-f263a50f1d5a}</Project>
+      <Name>Horsesoft.Procgame.Manager.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules\Horsesoft.MenuTileNavigation\Horsesoft.MenuTileNavigation.csproj">
+      <Project>{C3F8E480-B726-47A9-AA69-B8E9D8F92B80}</Project>
+      <Name>Horsesoft.MenuTileNavigation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules\Horsesoft.Procgame.AssetServices\Horsesoft.Procgame.AssetServices.csproj">
+      <Project>{ab8b448c-dd74-4d60-a041-3e5d03a32180}</Project>
+      <Name>Horsesoft.Procgame.AssetServices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tree.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="asset\dmd\Blood\bloodSplat0000.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0001.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0002.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0003.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0004.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0005.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0006.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0007.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0008.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0009.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0010.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0011.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0012.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0013.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0014.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0015.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0016.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0017.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0018.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0019.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0020.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0021.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0022.png" />
+    <Resource Include="asset\dmd\Blood\bloodSplat0023.png" />
+    <Resource Include="asset\dmd\light_texture.png" />
+    <Resource Include="asset\dmd\texture.png" />
+    <Content Include="asset\fonts\drawing.svg" />
+    <Resource Include="asset\fonts\EvilDeadCheryl3.jpg" />
+    <Resource Include="asset\fonts\Hero_Ash__96074.jpg" />
+    <Resource Include="asset\fonts\images.duckduckgo.com.jpg" />
+    <Resource Include="asset\fonts\SIL Open Font License.txt" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0000.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0001.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0002.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0003.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0004.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0005.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0006.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0007.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0008.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0009.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0010.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0011.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0012.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0013.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0014.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0015.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0016.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0017.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0018.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0019.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0020.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0021.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0022.png" />
+    <Resource Include="asset\gfx\Blood\bloodSplat0023.png" />
+    <Resource Include="asset\gfx\light_texture.png" />
+    <Content Include="asset\gfx\RoboClip.avi" />
+    <Resource Include="asset\gfx\texture.png" />
+    <Content Include="asset\gfx\Trailer1.mp4" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0001.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0002.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0003.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0004.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0005.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0006.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0007.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0008.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0009.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0010.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0011.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0012.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0013.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0014.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0015.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0016.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0017.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0018.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0019.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0020.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0021.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0022.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0023.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0024.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0025.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0026.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0027.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0028.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0029.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0030.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0031.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0032.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0033.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0034.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0035.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0036.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0037.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0038.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0039.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0040.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0041.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0042.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0043.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0044.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0045.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0046.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0047.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0048.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0049.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0050.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0051.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0052.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0053.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0054.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0055.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0056.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0057.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0058.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0059.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0060.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0061.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0062.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0063.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0064.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0065.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0066.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0067.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0068.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0069.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0070.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0071.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0072.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0073.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0074.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0075.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0076.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0077.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0078.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0079.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0080.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0081.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0082.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0083.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0084.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0085.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0086.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0087.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0088.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0089.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0090.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0091.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0092.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0093.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0094.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0095.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0096.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0097.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0098.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0099.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0100.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0101.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0102.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0103.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0104.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0105.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0106.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0107.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0108.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0109.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0110.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0111.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0112.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0113.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0114.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0115.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0116.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0117.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0118.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0119.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0120.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0121.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0122.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0123.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0124.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0125.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0126.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0127.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0128.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0129.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0130.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0131.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0132.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0133.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0134.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0135.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0136.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0137.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0138.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0139.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0140.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0141.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0142.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0143.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0144.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0145.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0146.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0147.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0148.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0149.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0150.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0151.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0152.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0153.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0154.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0155.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0156.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0157.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0158.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0159.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0160.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0161.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0162.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0163.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0164.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0165.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0166.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0167.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0168.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0169.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0170.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0171.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0172.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0173.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0174.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0175.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0176.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0177.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0178.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0179.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0180.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0181.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0182.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0183.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0184.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0185.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0186.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0187.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0188.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0189.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0190.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0191.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0192.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0193.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0194.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0195.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0196.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0197.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0198.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0199.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0200.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0201.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0202.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0203.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0204.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0205.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0206.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0207.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0208.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0209.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0210.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0211.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0212.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0213.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0214.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0215.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0216.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0217.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0218.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0219.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0220.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0221.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0222.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0223.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0224.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0225.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0226.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0227.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0228.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0229.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0230.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0231.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0232.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0233.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0234.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0235.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0236.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0237.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0238.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0239.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0240.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0241.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0242.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0243.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0244.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0245.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0246.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0247.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0248.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0249.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0250.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0251.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0252.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0253.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0254.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0255.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0256.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0257.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0258.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0259.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0260.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0261.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0262.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0263.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0264.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0265.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0266.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0267.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0268.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0269.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0270.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0271.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0272.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0273.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0274.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0275.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0276.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0277.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0278.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0279.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0280.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0281.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0282.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0283.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0284.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0285.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0286.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0287.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0288.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0289.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0290.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0291.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0292.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0293.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0294.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0295.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0296.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0297.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0298.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0299.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0300.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0301.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0302.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0303.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0304.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0305.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0306.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0307.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0308.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0309.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0310.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0311.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0312.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0313.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0314.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0315.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0316.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0317.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0318.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0319.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0320.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0321.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0322.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0323.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0324.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0325.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0326.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0327.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0328.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0329.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0330.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0331.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0332.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0333.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0334.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0335.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0336.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0337.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0338.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0339.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0340.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0341.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0342.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0343.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0344.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0345.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0346.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0347.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0348.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0349.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0350.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0351.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0352.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0353.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0354.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0355.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0356.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0357.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0358.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0359.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0360.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0361.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0362.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0363.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0364.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0365.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0366.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0367.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0368.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0369.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0370.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0371.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0372.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0373.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0374.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0375.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0376.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0377.jpg" />
+    <Resource Include="asset\gfx\Trailer1\Trailer1_0378.jpg" />
+    <Content Include="asset\gfx\Trailer2.mp4" />
+    <Content Include="asset\music\DeadByDawnPartOne.mp3" />
+    <Content Include="asset\music\DeadByDawnPartTwo.mp3" />
+    <Content Include="asset\music\pianoFull.mp3" />
+    <Content Include="asset\music\TestSong.mp3" />
+    <Content Include="asset\sfx\bump1.ogg" />
+    <Content Include="asset\sfx\bump2.ogg" />
+    <Content Include="asset\sound\voice\neh.ogg" />
+    <Content Include="asset\sound\voice\test.ogg" />
+    <Content Include="asset\sound\voice\woof.ogg" />
+    <Content Include="asset\voice\asas.ogg" />
+    <Content Include="asset\voice\AshBonus.ogg" />
+    <Content Include="asset\voice\BallLaunch.ogg" />
+    <Content Include="asset\voice\chine.ogg" />
+    <Content Include="asset\voice\nrh.ogg" />
+    <Content Include="asset\voice\test.ogg" />
+    <Content Include="asset\voice\test2.mp3" />
+    <Content Include="asset\voice\Trailer1.ogg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="asset\lampshows\" />
+    <Folder Include="asset\sound\sfx\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\packages\Fody.1.28.3\build\Fody.targets" Condition="Exists('..\..\packages\Fody.1.28.3\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Fody.1.28.3\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Fody.1.28.3\build\Fody.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
